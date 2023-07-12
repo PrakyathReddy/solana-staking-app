@@ -6,7 +6,17 @@ use solana_program::program_error::ProgramError;
 pub enum StakingError {
     /// Invalid instruction
     #[error("Invalid instruction")]
-InvalidInstruction, }
+    InvalidInstruction, 
+
+    #[error("Invalid Signer")]
+    InvalidSigner,
+
+    #[error("Invalid Owner")]
+    InvalidOwner,
+
+    #[error("Account already initialized")]
+    AlreadyInitialized,
+}
 
 impl From for ProgramError {
     fn from(e: StakingError) -> Self {
