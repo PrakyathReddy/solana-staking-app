@@ -30,3 +30,5 @@ src/processor.rs - that the heart of our program, here we handle all of the logi
 > Plan what we need as a state of our staking pool. We need an authority who owns the staking pool, the amount of staked tokens, the number of users, and how many rewards users earn per staked token.
 
 > process_initialize_pool function - We need to check that the first account is a signer as our program expects it to be Staking pool authority; we need to check that the second account is some storage and is not yet initialized. Once those constraints are satisfied, we can initialize the pool storage account with good defaults.
+
+> tests/initialize_pool.rs will prepare the test environment and verify that the staking pool is initialized correctly.
