@@ -20,4 +20,11 @@ fn initialize_pool() {
     let (test_validator, payer) = TestValidatorGenesis::default()
         .add_program("stakingapp", program_id)
         .start();
+    let rpc_client = test_validator.get_rpc_client();
+
+    // generate pool authority and storage accounts
+    let pool_authority = Keypair::new();
+    println!("pool authority: {:#?}", pool_authority.pubkey());
+    let pool_storage_account = Keypair::new();
+    println!("pool_storage_account: {:#?}", pool_storage_account.pubkey());
 }
