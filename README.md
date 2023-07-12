@@ -28,3 +28,5 @@ src/processor.rs - that the heart of our program, here we handle all of the logi
 > in the processor.rs, we parse an instruction, serialized with borsh into bytes given as instruction_data, into Instruction enum and match which concrete instruction has been passed. For now, any other instruction is not supported.
 
 > Plan what we need as a state of our staking pool. We need an authority who owns the staking pool, the amount of staked tokens, the number of users, and how many rewards users earn per staked token.
+
+> process_initialize_pool function - We need to check that the first account is a signer as our program expects it to be Staking pool authority; we need to check that the second account is some storage and is not yet initialized. Once those constraints are satisfied, we can initialize the pool storage account with good defaults.
