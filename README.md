@@ -22,3 +22,5 @@ src/processor.rs - that the heart of our program, here we handle all of the logi
 - Add an instruction to Create users and Stake, so we can store how much concrete user have staked, the timestamp of the last stake, and how much rewards a user has earned.
 - Also, we would need to allow a user to withdraw his stake with Unstake.
 - And last but not least is to Claim earned rewards.
+
+> We need to provide a concrete error when an instruction is invalid. Use error.rs to define such possibilities of error
